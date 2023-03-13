@@ -16,7 +16,7 @@ namespace Colletta
         {
             InitializeComponent();
         }
-        public CollettaTotale colletta;
+        CollettaTotale colletta = new CollettaTotale();
         string[] intes = { "chiave", "Partecipante", "Quota" };
         Partecipante temp;
         private void aggiungi_Click(object sender, EventArgs e)
@@ -78,6 +78,11 @@ namespace Colletta
             }
             else
                 throw new Exception("compilare tutte le textbox");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

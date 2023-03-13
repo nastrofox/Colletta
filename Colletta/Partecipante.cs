@@ -20,6 +20,28 @@ namespace Colletta
         {
 
         }
+        public bool Equals(Partecipante p)
+        {
+            if (p == null)
+                return false;
+            if (p == this)
+                return true;
+            return Id.Equals(p.Id);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
+
+        public override bool Equals(Object o)
+        {
+            if (!(o is Partecipante))
+                return false;
+
+            return Equals((Partecipante)o);
+        }
+
         public override string ToString()
         {
             return Id + ";" + Nome + ";" + Importo.ToString();
